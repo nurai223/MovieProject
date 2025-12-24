@@ -1,6 +1,5 @@
 from pathlib import Path
 import os
-from django.conf.global_settings import AUTH_USER_MODEL
 from dotenv import load_dotenv
 from datetime import timedelta
 
@@ -140,6 +139,7 @@ MODELTRANSLATION_LANGUAGES = ('en', 'ru')
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
